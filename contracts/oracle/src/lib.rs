@@ -133,3 +133,6 @@ mod test {
 
 // NOTE: Future improvement — emit Soroban events on condition fulfillment
 // env.events().publish((Symbol::new(&env, "condition_fulfilled"),), (beneficiary, program_id));
+
+// TODO: test_unauthorized_verifier — expect panic when non-whitelisted address calls fulfill_condition
+// TODO: test_double_initialize — expect panic on second initialize call
