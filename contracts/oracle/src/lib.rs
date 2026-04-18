@@ -130,3 +130,6 @@ mod test {
     // TODO: test_unauthorized_verifier_panics
     // TODO: test_double_initialize_panics
 }
+
+// NOTE: Future improvement — emit Soroban events on condition fulfillment
+// env.events().publish((Symbol::new(&env, "condition_fulfilled"),), (beneficiary, program_id));
