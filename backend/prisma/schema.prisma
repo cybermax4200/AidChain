@@ -1,0 +1,63 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model NGO {
+  id           String    @id @default(uuid())
+  name         String
+  publicKey    String    @unique
+  email        String    @unique
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  programs     Program[]
+}
+
+model Program {
+  id              String        @id @default(uuid())
+  name            String
+  description     String?
+  ngoId           String
+  ngo             NGO           @relation(fields: [ngoId], references: [id])
+  escrowPublicKey String?
+  totalFunded     Decimal       @default(0)
+  createdAt       DateTime      @default(now())
+  beneficiaries   Beneficiary[]
+  conditions      Condition[]
+}
+
+model Beneficiary {
+  id              String      @id @default(uuid())
+  publicKey       String      @unique
+  name            String
+  phoneNumber     String?
+  programId       String
+  program         Program     @relation(fields: [programId], references: [id])
+  allocatedAmount Decimal     @default(0)
+  claimedAmount   Decimal     @default(0)
+  enrolledAt      DateTime    @default(now())
+  conditions      Condition[]
+}
+
+model Condition {
+  id            String      @id @default(uuid())
+  programId     String
+  program       Program     @relation(fields: [programId], references: [id])
+  beneficiaryId String
+  beneficiary   Beneficiary @relation(fields: [beneficiaryId], references: [id])
+  conditionType String
+  description   String?
+  isFulfilled   Boolean     @default(false)
+  evidenceHash  String?
+  verifiedBy    String?
+  verifiedAt    DateTime?
+  createdAt     DateTime    @default(now())
+}
+
+// TODO: Transaction model for full audit trail
+// TODO: FieldOfficer model
+// TODO: Donor model for transparency portal
