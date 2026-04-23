@@ -54,6 +54,14 @@ export const getAccountBalances = async (publicKey: string) => {
   return account.balances;
 };
 
+export const claimBalance = async (
+  sourceSecret: string,
+  balanceId: string
+) => {
+  // TODO: implement claim operation
+  throw new Error("Not implemented");
+};
+
 // TODO: claimBalance(sourceSecret, balanceId) - claim a claimable balance
 // TODO: createAccount(sourceSecret, newPublicKey) - fund a new account
 // TODO: trustAsset(sourceSecret, assetCode, issuer) - establish trustline
