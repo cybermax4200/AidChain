@@ -67,3 +67,7 @@ router.get('/pending', async (_req, res) => {
 });
 
 export default router;
+
+// NOTE for contributors: mount /pending before /:programId/:beneficiaryId in Express
+// to avoid Express treating "pending" as a programId param.
+// In index.ts, ensure conditionRoutes are registered correctly.
