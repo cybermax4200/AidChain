@@ -165,3 +165,6 @@ export default function NGODashboard() {
     </div>
   );
 }
+
+// TODO: wrap in React ErrorBoundary
+// TODO: add skeleton loading states instead of plain "Loading..." text
