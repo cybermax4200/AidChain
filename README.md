@@ -612,3 +612,19 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 ---
 
 > Built with ❤️ to reduce poverty through transparent, accountable aid distribution on Stellar.
+
+---
+
+## Current Status
+
+**v0.1.0 scaffold** — 20-day development sprint complete.
+
+| Layer | Status |
+|---|---|
+| Oracle contract | ✅ 50% — initialize, fulfill, is_condition_met |
+| Escrow contract | 🔲 0% — stubs only, open for contributors |
+| Backend API | ✅ 50% — CRUD routes, Stellar service, Prisma schema |
+| Frontend | ✅ 90% — NGO Dashboard, Beneficiary Portal, Donor Tracker |
+| Field App | 🔲 scaffold only — open for contributors |
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) to pick up where we left off.
