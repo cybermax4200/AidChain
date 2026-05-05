@@ -42,3 +42,13 @@ Thank you for your interest in contributing! AidChain is open to contributions f
 - Include tests for backend routes
 - For contract changes, run `cd contracts && cargo test`
 - Reference the relevant TODO comment in your PR description
+
+### Issue Templates
+
+Use the GitHub issue templates when picking up a TODO:
+- **Feature request** — for implementing a TODO item
+- **Bug report** — for reporting issues
+
+### Architecture Notes
+
+See [docs/architecture.md](docs/architecture.md) for design decisions and open questions.
