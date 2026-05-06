@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Wallet } from 'lucide-react';
 import StatusBadge from '../components/StatusBadge';
 import api from '../lib/api';
