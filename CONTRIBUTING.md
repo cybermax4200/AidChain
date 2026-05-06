@@ -4,12 +4,12 @@ Thank you for your interest in contributing! AidChain is open to contributions f
 
 ### What needs to be built
 
-#### Contracts (50% remaining)
+#### Contracts
 - `contracts/escrow/src/lib.rs` — Implement `initialize`, `lock_funds`, `release_funds`, `reclaim`
 - `contracts/oracle/src/lib.rs` — Add `add_verifier`, `remove_verifier`, `get_condition_record`, `transfer_admin`
 - Add comprehensive contract tests
 
-#### Backend (50% remaining)
+#### Backend
 - `backend/src/services/oracle.ts` — Soroban RPC integration for on-chain condition recording
 - `backend/src/routes/ngo.ts` — `POST /programs/:id/fund` (Stellar claimable balance creation)
 - `backend/src/routes/beneficiary.ts` — `POST /:publicKey/claim` (claim claimable balance)
@@ -18,7 +18,7 @@ Thank you for your interest in contributing! AidChain is open to contributions f
 - `backend/prisma/schema.prisma` — Add `Transaction`, `FieldOfficer`, `Donor` models
 - SMS notifications via Twilio
 
-#### Frontend (10% remaining)
+#### Frontend
 - `frontend/src/lib/api.ts` — JWT interceptor
 - `frontend/src/pages/BeneficiaryPortal.tsx` — Claim button + SEP-24 off-ramp flow
 - `frontend/src/pages/DonorTracker.tsx` — Per-beneficiary drill-down, CSV/PDF export
